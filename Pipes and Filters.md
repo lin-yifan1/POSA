@@ -4,7 +4,7 @@
 
 Mocha 编译器：
 
-<img src="F:\研一春\高级软件工程\POSA\Figures\mocha_demo.png" style="zoom:50%;" />
+![](.\Figures\mocha_demo.png)
 
 ## 背景
 
@@ -40,21 +40,21 @@ $$
 
 ### 推式流水线
 
-<img src="F:\研一春\高级软件工程\POSA\Figures\push pipeline.png" style="zoom:60%;" />
+![](.\Figures\push pipeline.png)
 
 ### 拉式流水线
 
-<img src="F:\研一春\高级软件工程\POSA\Figures\pull pipeline.png" style="zoom:60%;" />
+![](.\Figures\pull pipeline.png)
 
 ### 推-拉流水线
 
-<img src="F:\研一春\高级软件工程\POSA\Figures\mixed push-pull pipeline.png" style="zoom:60%;" />
+![](.\Figures\mixed push-pull pipeline.png)
 
 数据源和数据接收器都是被动的，由 Filter2 主动发起处理过程。
 
 ### 全主动流水线
 
-<img src="F:\研一春\高级软件工程\POSA\Figures\typical pipeline.png" style="zoom:60%;" />
+![](.\Figures\typical pipeline.png)
 
 最常见的流水线结构。所有过滤器都主动拉取数据、执行计算并推送数据，因此需要管道来保证多个过滤器线程之间的同步：
 
