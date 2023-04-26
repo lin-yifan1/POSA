@@ -56,11 +56,11 @@ class Model {
 public:
 	Model(List<String> partyNames);
     
-// access interface for modification by controller
-	void clearVotes(); / / set voting values to 0
+	// access interface for modification by controller
+	void clearVotes(); // set voting values to 0
 	void changeVote(String party, long vote);
     
-// factory functions for view access to data
+	// factory functions for view access to data
 	Iterator<long> makeVoteIterator() {
 		return Iterator<long>(votes);
 	}
@@ -95,8 +95,8 @@ private :
 };
 ```
 
-- 用 Observer 来指代 View 和 Controller，让 View 和 Controller 都继承 Observer；
-- 可以对 Module 进行 `attach/detach` 来注册/取消注册；
+- 用 Observer 来指代 View 和 Controller，让 View 和 Controller 都[继承](https://www.runoob.com/cplusplus/cpp-inheritance.html) Observer；
+- 可以对 Module 进行 `attach/detach` 来注册/取消注册 Observer；
 - `notify()` 遍历了注册表 `registry` 中所有的 Observer 对象并调用其更新方法 `update()`，从而实现在数据更新后更新 View 和 Controller；
 
 ```c++
@@ -108,3 +108,29 @@ void Model::notify() {
 	}
 }
 ```
+
+### 设计并实现 View
+
+View 主要需要三个模块：init、update、draw。
+
+```c++
+class View : public Observer {
+public:
+	View(Model *m) : myModel(m), myController(0)
+		{ myModel -> attach(this); }
+	virtual ~View() { myModel ->detach(this); }
+	virtual void update() { this->draw0; }
+	// abstract interface to be redefined:
+	virtual void initialize(); // see below
+	virtual void draw(); // (re-)display view
+TODO
+```
+
+### 设计并实现 Controller
+
+### 设计并实现 View-Controller 关系
+
+### 实现搭建 MVC 的代码
+
+## TODO
+https://www.garfieldtech.com/blog/mvc-vs-pac

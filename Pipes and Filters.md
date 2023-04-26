@@ -4,7 +4,7 @@
 
 Mocha 编译器：
 
-![](.\Figures\mocha_demo.png)
+![](./Figures/mocha_demo.png)
 
 ## 背景
 
@@ -40,21 +40,21 @@ $$
 
 ### 推式流水线
 
-![](.\Figures\push pipeline.png)
+![](./Figures/push%20pipeline.png)
 
 ### 拉式流水线
 
-![](.\Figures\pull pipeline.png)
+![](./Figures/pull%20pipeline.png)
 
 ### 推-拉流水线
 
-![](.\Figures\mixed push-pull pipeline.png)
+![](./Figures/mixed%20push-pull%20pipeline.png)
 
 数据源和数据接收器都是被动的，由 Filter2 主动发起处理过程。
 
 ### 全主动流水线
 
-![](.\Figures\typical pipeline.png)
+![](./Figures/typical%20pipeline.png)
 
 最常见的流水线结构。所有过滤器都主动拉取数据、执行计算并推送数据，因此需要管道来保证多个过滤器线程之间的同步：
 
@@ -81,3 +81,7 @@ $$
 缺点：
 
 >  详见原书；
+
+## TODO
+
+https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff647419(v=pandp.10)?redirectedfrom=MSDN
